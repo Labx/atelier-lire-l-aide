@@ -19,7 +19,7 @@ ls -A # c'est différent !
 
 ## Accéder à l'aide
 
-Deux façon pour accéder à l'aide d'une commande seront décrites dans ce document:
+Deux façon pour accéder à l'aide d'une commande (ici `ls`[⁵](https://fr.wikipedia.org/wiki/Ls)) seront décrites dans ce document:
 
 * aide concise avec l'option `--help` (parfois `-?` ou `-h`) :
 
@@ -95,20 +95,84 @@ Signifie que cet argument peut être répété.
 
 ## Concept de _fichier_ et _répertoire_
 
-Sur Linux **tout est fichier[¹](https://en.wikipedia.org/wiki/Everything_is_a_file)[²](http://www.howtogeek.com/117939/htg-explains-what-everything-is-a-file-means-on-linux/)**. Il existe un fichier pour chacun de vos documents, disques, CD/DVD, USB, claviers et autres périphériques. Un fichier peut être de différente nature, par exemple cela peut être un simple document (PDF, doc, etc.), un répertoire, c'est-à-dire un fichier qui contient d'autres fichier ou répertoire.
+Sur Linux **tout est fichier[¹](https://en.wikipedia.org/wiki/Everything_is_a_file)[²](http://www.howtogeek.com/117939/htg-explains-what-everything-is-a-file-means-on-linux/)**. Il existe un fichier pour chacun de vos documents, disques, CD/DVD, USB, claviers et autres périphériques. Un fichier peut être de différente nature, par exemple: 
 
-Remarque : un répertoire est un type de fichier qui peut en contenir d'autre (fichier ou répertoire)
+* un _document_ (PDF, doc, etc.) ;
+* un _répertoire_, c'est-à-dire un fichier qui contient des documnents ou d'autres fichiers (p. ex. des répertoires). 
+* un périphérique (ou _device_) ;
+* etc.
 
-Remarque : les termes _répertoire_, _dossier_ sont équivalent. En anglais ils correspondent respectivement à _directory_ et _folder_.
+Les termes _répertoire_[³](https://fr.wikipedia.org/wiki/R%C3%A9pertoire_%28informatique%29) et _dossier_ sont équivalent, et en anglais correspondent respectivement à _directory_ et _folder_.
 
-## Notion de chemin
+## Chemin vers les fichiers
 
-## Chemin absolue vs. relatif
+Linux rattache tous les fichiers –périphériques et répertoires– à un répertoire dit « racine » et représenter par un simple `/` (_slash_). Pour accéder à un fichier, on indique le chemin pour l'atteindre soit :
 
-    analogie avec la maison :
+* chemin _absolue_, en partant de la racine ;
+* chemin _relative_, en partant du répertoire courant (cf. résultat de `pwd`).
 
-    ./relatif/ ← je suis dans la chambre, regarder sur l'étagère
+Dans un chemin vers un fichier, les répertoires sont séparés par un `/` (_slash_):
 
-    /chemin/absolu ← je rentre dans la maison, je vais dans la chambre et je regarde sur l'étagère
+* `/` ← la racine du système ;
+* `/home/` ← répertoire utilisateurs ;
+* `/home/ed8/` ← répertoire de l'utilisateur `ed8` ;
+* `/dev` ← répertoire des périphériques ;
 
-Tapez votre commande il explique → http://explainshell.com/explain?cmd=ls+-a
+### Analogie avec la maison
+
+* **Chemin absolu**
+
+        /maison/couloir/chambre/étagère/livre.pdf
+
+    Je rentre dans la _maison_, je passe par le _couloir_ puis je vais dans la _chambre_ et je regarde sur l'_étagère_ pour prendre le _livre_.
+
+* **Chemin relatif**
+
+        ./étagère/livre.pdf
+
+    Sachant que je suis dans la _chambre_, je regarde sur l'_étagère_ et je prends le _livre_.
+
+### Chemin absolue 
+
+On indique le chemin complet vers le fichier que l'on souhaite manipuler, c'est-à-dire tous les répertoires que l'on traverse en partant de la racine.
+
+    ls /var/log/ 
+
+On liste le contenu du répertoire `log/`, qui contient les fichiers de journalisation du système (garde une trace de ce qui se passe).
+
+    ls /home/ed8/
+
+Liste le contenu du répertoire de l'utilisateur `ed8`. Maintenant listons également les fichiers cachés (ceux débutants par un `.`):
+
+    ls -a /home/ed8/
+
+Le résultat affiche beaucoup plus de fichiers que sans l'option `-a`. Il s'agit des fichiers cachés.
+
+### Chemin relatif
+
+Relatif sous-entends par rapport au répertoire dans lequel nous sommes (essayer la commande `pwd`), on parle également de répertoire de travail. Il n'est donc pas nécessaire de répéter le chemin depuis la machine jusqu'à ce répertoire. Dans la suite nous nous placerons dans le répertoire `/home/`.
+
+Nous commencerons par lister les fichiers cachés de ce répertoire :
+
+    ls -a /home/
+On obtient par exemple :
+
+    .  ..  ed8  labx  lost+found
+
+Détaillons le résultat:
+
+* `.` fait référence au _répertoire courant_ dans notre cas `.` est équivalent à `/home/` ;
+* `..` désigne le _répertoire parent_ qui dans notre cas correspond à la racine `/` ;
+* `ed8` et `labx` sont des répertoires utilisateurs ;
+* `lost+found` est un répertoire système qui stocke les fichiers défectueux ou « supprimés »[⁴](http://unix.stackexchange.com/a/18157/17362).
+
+Si l'on se place **maintenant dans le répertoire `/home/ed8/`** et que l'on exécute la commande `ls ..` (chemin relatif), cela revient à lister le répertoire parent `ls /home/` (chemin absolu).
+
+On peut bien sûr chaîner les syntaxes :
+
+* `ls`, `ls .`, `ls ./` sont identiques et liste `ls /home/ed8/` ;
+* `ls ..`, `ls ../`, `ls ./../` sont équivalents à faire `ls /home/`.
+
+## Références
+
+Un site qui explique (en anglais) les commandes: [http://explainshell.com/explain?cmd=ls+-a](http://explainshell.com/explain?cmd=ls+-a)
