@@ -6,7 +6,12 @@
 > 
 > Il est évident que certains concepts sont simplifiés pour s'adapter au public. 
 
-Si toutefois vous trouvez des erreurs, merci de les signaler à l'auteur: [@edouard_lopez](https://twitter.com/edouard_lopez).
+Si toutefois vous trouvez des erreurs, merci de les signaler à l'auteur via : 
+
+* Mail : [dev+clilabx@edouard-lopez.com](dev+clilabx@edouard-lopez.com) ;
+* Twitter : [@edouard_lopez](https://twitter.com/edouard_lopez) ;
+* IRC : #giroll ou #labx ;
+* en venant discuter à [Giroll](http://giroll.org/), au [LabX](www.labx.fr/), au [Node](http://bxno.de/) ou autres.
 
 ## La casse (majuscule/minuscule) sous linux
 
