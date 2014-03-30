@@ -180,4 +180,9 @@ On peut bien sûr chaîner les syntaxes :
 
 ## Références
 
-Un site qui explique (en anglais) les commandes: [http://explainshell.com/explain?cmd=ls+-a](http://explainshell.com/explain?cmd=ls+-a)
+* ateliers CLI organisés au [LabX](https://www.labx.fr/) : [https://www.labx.fr/]() ;
+* Un site qui explique (en anglais) les commandes : [http://explainshell.com/explain?cmd=ls+-a]() ;
+* commande [`ls`](https://fr.wikipedia.org/wiki/Ls) : [https://fr.wikipedia.org/wiki/Ls]() ;
+* [_Répertoire_](https://fr.wikipedia.org/wiki/R%C3%A9pertoire_%28informatique%29) sur Wikipédia-fr : [https://fr.wikipedia.org/wiki/Répertoire_(informatique)]() ;
+* [_Everything is a file_](https://en.wikipedia.org/wiki/Everything_is_a_file) sur Wikipedia-en : [https://en.wikipedia.org/wiki/Everything_is_a_file]() ;
+* [_Explains what everything is a file means on Linux_](http://www.howtogeek.com/117939/htg-explains-what-everything-is-a-file-means-on-linux/) : [http://www.howtogeek.com/117939/htg-explains-what-everything-is-a-file-means-on-linux/]().
