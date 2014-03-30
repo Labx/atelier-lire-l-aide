@@ -35,7 +35,7 @@ Deux façon pour accéder à l'aide d'une commande (ici `ls`[⁵](https://fr.wik
 
 L'aide nous indique d'abord la forme générique de la commande
 
-* `ls [OPTION]... [FILE]...` prend des arguments (cf. [plus bas](#Description générique)).
+* `ls [OPTION]... [FILE]...` prend des arguments (cf. [plus bas](#description-générique)).
 
 Dans notre cas, la commande se décompose comme suit:
 
