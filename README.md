@@ -3,8 +3,8 @@
 ### Table des matières
 
 - [Préambule](#préambule)
-- [La casse (majuscule/minuscule) sous Linux](#la-casse-majusculeminuscule-sous Linux)
-- [Accéder à l'aide](#accéder-à-l'aide)
+- [La casse (majuscule/minuscule) sous Linux](#la-casse-majusculeminuscule-sous-linux)
+- [Accéder à l'aide](#accéder-à-laide)
     - [Syntaxe de l'aide](#syntaxe-de-laide)
     - [Options: forme longue vs. forme courte](#options-forme-longue-vs-forme-courte)
 - [Description générique](#description-générique)
@@ -85,6 +85,8 @@ ls -b       # différent
 L'aide commence par la ligne `usage: ls [OPTION]... [FILE]...`, qui nous donnes les informations suivantes sur l'usage de la commande `ls`:
 
 * `ls [OPTION]... [FILE]...` indique que `ls` prend deux types d'arguments: des _options_ et des _fichiers_ (cf. [plus bas](#Description générique)).
+
+
 ### `[ ]` les crochets
 
 Signifie que l'argument est optionnel. Par exemple,
