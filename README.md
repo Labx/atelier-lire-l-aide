@@ -2,20 +2,20 @@
 
 ### Table des matières
 
-- [Préambule](préambule)
-- [La casse (majuscule/minuscule) sous Linux](la-casse-majusculeminuscule-sous Linux)
-- [Accéder à l'aide](accéder-à-l'aide)
-    - [Syntaxe de l'aide](syntaxe-de-laide)
-    - [Options: forme longue vs. forme courte](options-forme-longue-vs-forme-courte)
-- [Description générique](description-générique)
-    - [`[ ]` les crochets](--les-crochets)
-    - [`[ ]...` 3 points de suspension](--3-points-de-suspension)
-- [Concept de _fichier_ et _répertoire_](concept-de-fichier-et-répertoire)
-- [Chemin vers les fichiers](chemin-vers-les-fichiers)
-    - [Analogie avec la maison](analogie-avec-la-maison)
-    - [Chemin absolue](chemin-absolue)
-    - [Chemin relatif](chemin-relatif)
-- [Références](références)
+- [Préambule](#préambule)
+- [La casse (majuscule/minuscule) sous Linux](#la-casse-majusculeminuscule-sous Linux)
+- [Accéder à l'aide](#accéder-à-l'aide)
+    - [Syntaxe de l'aide](#syntaxe-de-laide)
+    - [Options: forme longue vs. forme courte](#options-forme-longue-vs-forme-courte)
+- [Description générique](#description-générique)
+    - [`[ ]` les crochets](#--les-crochets)
+    - [`[ ]...` 3 points de suspension](#--3-points-de-suspension)
+- [Concept de _fichier_ et _répertoire_](#concept-de-fichier-et-répertoire)
+- [Chemin vers les fichiers](#chemin-vers-les-fichiers)
+    - [Analogie avec la maison](#analogie-avec-la-maison)
+    - [Chemin absolue](#chemin-absolue)
+    - [Chemin relatif](#chemin-relatif)
+- [Références](#références)
 
 ## Préambule
 
